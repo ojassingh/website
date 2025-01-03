@@ -6,7 +6,7 @@ export default function Description() {
   const titles = [
     "Hi, I'm Ojas Singh!",
     "I'm a developer based out of Toronto, Canada.",
-    "Passionate about products that augment human capabilities.",
+    "I'm passionate about products that augment human capabilities.",
     "My goal is to build to amplify productivity and creativity.",
   ];
 
@@ -22,7 +22,7 @@ export default function Description() {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col text-gray-300 text-base">
+    <div className="w-full h-full flex flex-col text-gray-300 text-sm">
       {titles.map((model, index) => (
         <ScrambleIn
           key={index}

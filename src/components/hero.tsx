@@ -3,7 +3,6 @@ import { FC } from "react";
 import Description from "./description";
 import BlurFade from "./ui/blur-fade";
 import { ArrowUpRight, Sparkles } from "lucide-react";
-import grain from "@/../public/grain.jpg";
 import Link from "next/link";
 import ComesInGoesOutUnderline from "./ui/underline";
 import { EmailButton } from "./ui/email-button";
@@ -19,7 +18,7 @@ const Hero: FC = () => {
           <h2 className="text-xl">I like to build things for the web</h2>
         </BlurFade>
         <BlurFade inView delay={0.3}>
-          <h1 className="text-9xl font-medium">ojas singh</h1>
+          <h1 className="font-serif text-9xl font-medium">ojas singh</h1>
         </BlurFade>
       </div>
 
@@ -29,7 +28,7 @@ const Hero: FC = () => {
 
       <div className="col-span-1 col-start-8 row-span-12 border-l-[1px]" />
 
-      <div className="row-start-8 col-start-1">
+      <div className="col-start-1 row-start-8">
         <BlurFade inView delay={0.1}>
           <Sparkles fill="white" className="size-10" />
         </BlurFade>

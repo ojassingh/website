@@ -1,6 +1,6 @@
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
-import grain from "@/../public/grain.jpg";
+// import grain from "@/../public/grain.jpg";
 
 export default function Home() {
   return (
