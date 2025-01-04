@@ -20,7 +20,7 @@ export default function Home() {
       ></video>
       <div>
         <Hero />
-        <Projects />
+        {/* <Projects /> */}
       </div>
     </main>
   );
