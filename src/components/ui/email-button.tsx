@@ -34,7 +34,7 @@ export function EmailButton({ className }: { className?: string }) {
       onClick={handleCopy}
     >
       <ComesInGoesOutUnderline label="[E] email" className="hidden sm:block"/>
-      <p className="sm:hidden">[email]</p>
+      <p className="block sm:hidden">[email]</p>
       <Copy className="hidden sm:block mr-1 size-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100" />
     </div>
   );
