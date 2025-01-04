@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useRef } from "react";
 import ScrambleIn, { ScrambleInHandle } from "./ui/scramble-text";
+import { cn } from "@/lib/utils";
 
-export default function Description() {
+export default function Description({ className }: { className?: string }) {
   const titles = [
     "Hi! I'm Ojas - a developer based in Toronto",
     "I'm passionate about tools that augment our current capabilities.",
@@ -21,7 +22,12 @@ export default function Description() {
   }, []);
 
   return (
-    <div className="flex h-full w-full flex-col px-10 text-base text-gray-300">
+    <div
+      className={cn(
+        "flex h-full w-full flex-col text-base text-gray-400 sm:px-10",
+        ` ${className}`,
+      )}
+    >
       {titles.map((model, index) => (
         <ScrambleIn
           key={index}
