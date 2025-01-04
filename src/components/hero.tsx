@@ -62,7 +62,7 @@ const Hero: FC = () => {
       <div className="col-span-1 col-start-8 row-span-12 hidden border-r-[1px] sm:block" />
 
       {/* <div className="col-span-4 col-start-9 row-start-10"> */}
-      <div className="col-span-full col-start-1 row-start-1 flex sm:gap-1 pt-10 sm:col-span-6 sm:col-start-1 sm:row-start-2 sm:pt-0 sm:place-content-between">
+      <div className="col-span-full col-start-1 row-start-1 flex sm:gap-1 pt-10 sm:col-span-6 sm:col-start-1 sm:row-start-2 sm:pt-0 place-content-between">
         <BlurFade inView delay={0.4}>
           <Link
             target="_blank"

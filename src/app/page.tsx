@@ -16,6 +16,7 @@ export default function Home() {
         loop
         autoPlay
         muted
+        playsInline
         className="fixed inset-0 -z-10 mx-auto h-screen w-full object-cover opacity-40 sm:max-w-7xl"
       ></video>
       <div>
