@@ -60,10 +60,8 @@ const Hero: FC = () => {
       </div>
 
       <div className="col-span-1 col-start-8 row-span-12 hidden border-r-[1px] sm:block" />
-
-      {/* <div className="col-span-4 col-start-9 row-start-10"> */}
-      <div className="col-span-full col-start-1 row-start-1 flex place-content-between pt-10 sm:col-span-6 sm:col-start-1 sm:row-start-2 sm:gap-1 sm:pt-0">
-        <BlurFade inView delay={0.4}>
+      <div className="z-10 col-span-full col-start-1 row-start-1 flex place-content-between pt-10 sm:col-span-6 sm:col-start-1 sm:row-start-2 sm:gap-1 sm:pt-0">
+        <BlurFade delay={0.4} className="">
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/ojas-singh/"
@@ -73,11 +71,11 @@ const Hero: FC = () => {
               label="[L] linkedin"
               className="hidden sm:block"
             />
-            <p className="block sm:hidden">[linkedin]</p>
-            <ArrowUpRight className="mr-1 hidden size-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+            <span className="block sm:hidden">[linkedin]</span>
+            <ArrowUpRight className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
           </Link>
         </BlurFade>
-        <BlurFade inView delay={0.4 + 0.05}>
+        <BlurFade delay={0.4 + 0.05}>
           <Link
             target="_blank"
             href="https://github.com/ojassingh"
@@ -87,21 +85,21 @@ const Hero: FC = () => {
               label="[G] github"
               className="hidden sm:block"
             />
-            <p className="block sm:hidden">[github]</p>
-            <ArrowUpRight className="mr-1 hidden size-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+            <span className="block sm:hidden">[github]</span>
+            <ArrowUpRight className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
           </Link>
         </BlurFade>
-        <BlurFade inView delay={0.4 + 0.1}>
+        <BlurFade delay={0.4 + 0.1}>
           <EmailButton />
         </BlurFade>
-        <BlurFade inView delay={0.4 + 0.15}>
+        <BlurFade delay={0.4 + 0.15}>
           <Link href="#work" className="group flex items-center">
             <ComesInGoesOutUnderline
               label="[W] work"
               className="hidden sm:block"
             />
-            <p className="block sm:hidden">[work]</p>
-            <ArrowDown className="mr-1 hidden size-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+            <span className="block sm:hidden">[work]</span>
+            <ArrowDown className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
           </Link>
         </BlurFade>
       </div>
