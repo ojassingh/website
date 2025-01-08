@@ -24,7 +24,7 @@ export default function Description({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex h-full w-full flex-col text-base text-gray-400 sm:px-10",
+        "flex h-full w-full flex-col text-base text-gray-400 sm:px-10 px-6",
         ` ${className}`,
       )}
     >

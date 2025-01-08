@@ -1,5 +1,5 @@
 import Hero from "@/components/hero";
-// import Projects from "@/components/projects";
+import Work from "@/components/work";
 // import grain from "@/../public/grain.jpg";
 
 export default function Home() {
@@ -17,11 +17,11 @@ export default function Home() {
         autoPlay
         muted
         playsInline
-        className="fixed inset-0 -z-10 mx-auto h-screen w-full object-cover opacity-40 sm:max-w-7xl"
+        className="absolute inset-0 -z-10 mx-auto h-screen w-full object-cover opacity-40 sm:max-w-7xl"
       ></video>
       <div>
         <Hero />
-        {/* <Projects /> */}
+        <Work />
       </div>
     </main>
   );
