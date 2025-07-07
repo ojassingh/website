@@ -15,7 +15,7 @@ export default function Home() {
       <div>
         <div className="relative">
           <Hero />
-          <div className="h-40 bg-gradient-to-b from-transparent to-black"></div>
+          <div className="h-40 bg-linear-to-b from-transparent to-black"></div>
           <Work />
         </div>
       </div>
