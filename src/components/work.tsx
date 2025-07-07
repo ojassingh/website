@@ -1,7 +1,6 @@
 import React from "react";
 import { FC } from "react";
 import WorkCard from "./ui/work-card";
-// import work from '@/../public/work.png'
 
 type work = {
   title: string;
@@ -29,27 +28,19 @@ const works: work[] = [
     link: "",
     type: "Project",
   },
-  // {
-  //   title: "Work 3",
-  //   description: "This is work 3",
-  //   image: "/work.png",
-  //   link: "",
-  // },
 ];
 
 const Work: FC = () => {
   return (
-    <section id="projects" className="bg-black px-10 py-20">
-      {/* <h1 className="text-4xl text-gray-400">[</h1> */}
+    <section id="projects" className=" px-10 py-20">
       <div className="mt-10 grid grid-cols-2 gap-10">
-        {works.map(({ title, description, image, type, link }, index) => {
+        {works.map(({ title, description, image, type }, index) => {
           return (
             <WorkCard
               title={title}
               description={description}
               image={image}
               type={type}
-              // link={link}
               key={index}
               className=""
             />

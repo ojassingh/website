@@ -1,16 +1,9 @@
 import Hero from "@/components/hero";
 import Work from "@/components/work";
-// import grain from "@/../public/grain.jpg";
 
 export default function Home() {
   return (
     <main className="relative mx-auto border sm:max-w-7xl">
-      {/* <div
-        className="absolute inset-0 -z-20 opacity-5"
-        style={{
-          backgroundImage: `url(${grain.src})`,
-        }}
-      ></div> */}
       <video
         src="/gradient.mp4"
         loop
