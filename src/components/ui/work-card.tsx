@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const WorkCard: FC<{
   title: string;
@@ -16,7 +17,9 @@ const WorkCard: FC<{
         target="_blank"
         className="group relative flex h-full w-full items-center justify-center overflow-hidden rounded-sm bg-gray-100 object-cover shadow-lg ring-1 ring-white/10 transition-all duration-300"
       >
-        <img
+        <Image
+          width={1000}
+          height={1000}
           src={image}
           alt={title}
           className="h-full w-full object-cover transition-all duration-300"
