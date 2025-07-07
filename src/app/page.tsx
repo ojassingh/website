@@ -13,8 +13,11 @@ export default function Home() {
         className="absolute inset-0 -z-10 mx-auto h-screen w-full object-cover opacity-40 sm:max-w-7xl"
       ></video>
       <div>
-        <Hero />
-        <Work />
+        <div className="relative">
+          <Hero />
+          <div className="h-40 bg-gradient-to-b from-transparent to-black"></div>
+          <Work />
+        </div>
       </div>
     </main>
   );
