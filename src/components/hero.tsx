@@ -33,9 +33,10 @@ const Hero: FC = () => {
     <>
       <section
         id="hero"
-        className="grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
+        className="relative grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
       >
         <Nav />
+
         <div className="row-start-5">
           <div className="">
             <BlurFade inView delay={0.1}>
@@ -54,23 +55,33 @@ const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="col-span-1 row-start-11">
+        <div className="col-span-1 row-start-11 z-10">
           <p className="text-left text-base text-gray-400">
             Hey, I&apos;m Ojas - a developer based in Toronto.
             <br />
-            I&apos;m passionate about building tools that use AI to augment our
+            I&apos;m passionate about design engineering and AI to augment our
             current capabilities.
             <br />
           </p>
         </div>
 
         <div className="absolute bottom-0 left-0 translate-x-[-50%] translate-y-[50%]">
-          <Plus />
+          <Plus className="size-3 text-neutral-400" />
         </div>
         <div className="absolute right-0 bottom-0 translate-x-[50%] translate-y-[50%]">
-          <Plus />
+          <Plus className="size-3 text-neutral-400" />
         </div>
+        <div className="absolute bottom-0 z-0 h-40 w-full bg-line ar-to-b from-transparent to-black"></div>
       </section>
+      
+      <video
+        src="/gradient.mp4"
+        loop
+        autoPlay
+        muted
+        playsInline
+        className="absolute inset-0 -z-10 mx-auto h-screen w-full object-cover opacity-40 sm:max-w-7xl"
+      ></video>
     </>
   );
 };

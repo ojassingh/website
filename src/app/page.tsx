@@ -3,20 +3,10 @@ import Hero from "@/components/hero";
 
 export default function Home() {
   return (
-    <main className="relative mx-auto border sm:max-w-7xl">
-      <video
-        src="/gradient.mp4"
-        loop
-        autoPlay
-        muted
-        playsInline
-        className="fixed inset-0 -z-10 mx-auto h-screen w-full object-cover opacity-40 sm:max-w-7xl"
-      ></video>
-      <div>
-        <div className="relative">
-          <Hero />
-          {/* <Work /> */}
-        </div>
+    <main className="relative mx-auto sm:max-w-7xl bg-black  border-x-[1px] border-dashed border-neutral-600">
+      <div className="">
+      <Hero />
+      {/* <Work /> */}
       </div>
     </main>
   );
