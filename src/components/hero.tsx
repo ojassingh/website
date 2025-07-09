@@ -57,8 +57,7 @@ const Hero: FC = () => {
 
         <div className="col-span-1 row-start-11 z-10">
           <p className="text-left text-base text-gray-400">
-            Hey, I&apos;m Ojas - a developer based in Toronto.
-            <br />
+            I&apos;m a developer based in Toronto. <br/> Studied Physics and Statistics at the University of Toronto.
             I&apos;m passionate about design engineering and AI to augment our
             current capabilities.
             <br />
