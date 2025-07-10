@@ -1,4 +1,4 @@
-import { ArrowUpRight, Copy } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Copy } from "lucide-react";
 import Link from "next/link";
 import BlurFade from "./ui/blur-fade";
 import { useEffect } from "react";
@@ -33,6 +33,7 @@ export default function Nav() {
     window.addEventListener("keydown", handleKeyPress);
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
+  
   const links = [
     {
       href: "https://www.linkedin.com/in/ojas-singh/",
@@ -53,10 +54,18 @@ export default function Nav() {
       label: "[X] X",
       icon: ArrowUpRight,
     },
+
+    {
+      href: "#work",
+      label: "[W] work",
+      icon: ArrowDown,
+      placement: "right",
+    },
     {
       href: "/blog",
       label: "[B] blog",
       icon: ArrowUpRight,
+      placement: "right",
     },
   ];
 
@@ -71,13 +80,13 @@ export default function Nav() {
               className="group flex max-w-max items-center"
             >
               <p>{link.label}</p>
-              <span className="block sm:hidden">[{link.label.split(' ')[1]}]</span>
+              <span className="block sm:hidden">[{link.label}]</span>
               <link.icon className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </Link>
           ) : (
             <div className="group flex items-center">
               <p>{link.label}</p>
-              <span className="block sm:hidden">[{link.label.split(' ')[1]}]</span>
+              <span className="block sm:hidden">[{link.label}]</span>
               <link.icon className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </div>
           )}

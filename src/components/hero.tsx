@@ -4,6 +4,7 @@ import { FC } from "react";
 import BlurFade from "./ui/blur-fade";
 import { Plus, Sparkles } from "lucide-react";
 import Nav from "./nav";
+import Link from "next/link";
 
 const Hero: FC = () => {
  
@@ -12,7 +13,7 @@ const Hero: FC = () => {
     <>
       <section
         id="hero"
-        className="relative grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
+        className="relative border-b-[1px] border-dashed border-neutral-600 grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
       >
         <Nav />
 
@@ -22,12 +23,12 @@ const Hero: FC = () => {
               <Sparkles fill="white" className="size-10" />
             </BlurFade>
             <BlurFade inView delay={0.2}>
-              <h2 className="mt-8 text-left text-lg sm:text-xl">
+              <h2 className="mt-8 tracking-tight text-left text-lg sm:text-xl">
                 Building things for the web
               </h2>
             </BlurFade>
             <BlurFade inView delay={0.3}>
-              <h1 className="min-w-max text-left text-7xl font-medium text-white sm:text-9xl">
+              <h1 className="min-w-max tracking-tighter text-left text-7xl font-medium text-white sm:text-9xl">
                 ojas singh
               </h1>
             </BlurFade>
@@ -35,8 +36,10 @@ const Hero: FC = () => {
         </div>
 
         <div className="col-span-2 row-start-11 z-30">
-          <p className="text-left text-base text-gray-400">
-            I&apos;m a software engineer based in Toronto. <br/> Studied Physics and Statistics at the UofT.
+          <p className="text-left text-base tracking-tight text-neutral-400">
+            I&apos;m a software engineer based in Toronto. <br/> 
+            Studied Physics and Statistics at UofT. 
+            Currently building <Link className="text-white underline" href="https://getnewt.co/" target="_blank">Newt</Link>. 
             <br/>
             I&apos;m passionate about design engineering and AI to augment our
             current capabilities.
