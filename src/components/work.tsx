@@ -11,7 +11,6 @@ type work = {
   image: string;
   date: string;
   link: string;
-  type: string;
 };
 
 const works: work[] = [
@@ -20,16 +19,14 @@ const works: work[] = [
     description: "Agentic animation engine for mathematical visualizations",
     image: "/newt.png",
     date: "2025",
-    link: "https://getnewt.co/",
-    type: "Project",
+    link: "/work/newt",
   },
   {
     title: "swe-resume",
-    description: "Cursor for SWE job applications",
+    description: "Cursor for SWE job applications (400+ MOA)",
     date: "2024",
     image: "/sweresume.jpeg",
-    link: "",
-    type: "Project",
+    link: "/work/swe-resume",
   },
 ];
 
@@ -67,10 +64,11 @@ const Work: FC = () => {
         , where we&apos;re creating cool math videos.
       </p>
       <div className="mt-10 grid grid-cols-2 gap-10">
-        {works.map(({ title, description, image, date }, index) => {
+        {works.map(({ title, description, image, date, link }, index) => {
           return (
             <BlurFade inView delay={0.1 + index * 0.1} key={index}>
               <WorkCard
+              link={link}
               title={title}
               description={description}
               image={image}
