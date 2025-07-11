@@ -34,7 +34,7 @@ const works: work[] = [
 
 const Work: FC = () => {
   return (
-    <section id="work" className="px-10 py-20">
+    <section id="work" className="px-10 py-20 border-b-[1px] border-dashed border-neutral-600">
       <div className="flex justify-between">
         <h1 className="text-xl font-medium tracking-tight">Work</h1>
         <Link
