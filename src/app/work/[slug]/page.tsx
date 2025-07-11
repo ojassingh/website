@@ -58,7 +58,8 @@ export default async function Page(props: {
           </Link>
           <div className="flex items-center gap-2">
             <Link
-              href="/"
+              href={frontmatter.website}
+              target="_blank"
               className="flex items-center gap-2 text-neutral-400"
             >
               Website <ArrowUpRight className="size-4" />
