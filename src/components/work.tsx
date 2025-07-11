@@ -3,6 +3,7 @@ import { FC } from "react";
 import WorkCard from "./ui/work-card";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import BlurFade from "./ui/blur-fade";
 
 type work = {
   title: string;
@@ -68,7 +69,8 @@ const Work: FC = () => {
       <div className="mt-10 grid grid-cols-2 gap-10">
         {works.map(({ title, description, image, date }, index) => {
           return (
-            <WorkCard
+            <BlurFade inView delay={0.1 + index * 0.1} key={index}>
+              <WorkCard
               title={title}
               description={description}
               image={image}
@@ -76,6 +78,7 @@ const Work: FC = () => {
               key={index}
               className=""
             />
+            </BlurFade>
           );
         })}
       </div>
