@@ -53,7 +53,7 @@ const Hero: FC = () => {
         <div className="absolute right-0 bottom-0 translate-x-[50%] translate-y-[50%]">
           <Plus className="size-3 text-neutral-400" />
         </div>
-        <div className="absolute bottom-0 z-20 h-40 w-full bg-linear-to-b from-transparent to-black"></div>
+        <div className="absolute bottom-0 z-20 h-60 w-full bg-linear-to-b from-transparent to-black"></div>
       </section>
       
       <video
