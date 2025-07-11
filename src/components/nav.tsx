@@ -53,10 +53,11 @@ export default function Nav() {
       href: "https://x.com/ojassinghh",
       label: "[X] X",
       icon: ArrowUpRight,
+      newTab: false,
     },
 
     {
-      href: "#work",
+      href: "/#work",
       label: "[W] work",
       icon: ArrowDown,
       placement: "right",
@@ -75,7 +76,7 @@ export default function Nav() {
         <BlurFade key={index} delay={0.4 + index * 0.05}>
           {link.href ? (
             <Link
-              target="_blank"
+              target={link.newTab ? "_blank" : "_self"}
               href={link.href}
               className="group flex max-w-max items-center"
             >
