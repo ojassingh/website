@@ -15,17 +15,17 @@ type work = {
 
 const works: work[] = [
   {
-    title: "Work 1",
-    description: "AI-powered resume builder",
-    image: "/sweresume.jpeg",
-    date: "",
-    link: "",
+    title: "Newt",
+    description: "Agentic animation engine for mathematical visualizations",
+    image: "/newt.png",
+    date: "2025",
+    link: "https://getnewt.co/",
     type: "Project",
   },
   {
-    title: "Work 2",
-    description: "AI-powered resume builder",
-    date: "",
+    title: "swe-resume",
+    description: "Cursor for SWE job applications",
+    date: "2024",
     image: "/sweresume.jpeg",
     link: "",
     type: "Project",
@@ -34,7 +34,7 @@ const works: work[] = [
 
 const Work: FC = () => {
   return (
-    <section id="projects" className="px-10 py-20">
+    <section id="work" className="px-10 py-20">
       <div className="flex justify-between">
         <h1 className="text-xl font-medium tracking-tight">Work</h1>
         <Link
@@ -55,7 +55,7 @@ const Work: FC = () => {
         >
           Deskhead
         </Link>{" "}
-        and Cove. <br /> Currently building an agentic animation engine called{" "}
+        , Flow Robotics, and Cove. <br /> Currently building an agentic animation engine called{" "}
         <Link
           className="text-white underline"
           href="https://getnewt.co/"
@@ -66,13 +66,13 @@ const Work: FC = () => {
         , where we&apos;re creating cool math videos.
       </p>
       <div className="mt-10 grid grid-cols-2 gap-10">
-        {works.map(({ title, description, image, type }, index) => {
+        {works.map(({ title, description, image, date }, index) => {
           return (
             <WorkCard
               title={title}
               description={description}
               image={image}
-              type={type}
+              date={date}
               key={index}
               className=""
             />
