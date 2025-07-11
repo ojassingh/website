@@ -1,12 +1,10 @@
-import { ArrowDown, ArrowUpRight, Copy } from "lucide-react";
+import { ArrowUpRight, Copy } from "lucide-react";
 import Link from "next/link";
 import BlurFade from "./ui/blur-fade";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 export default function Nav() {
-  const router = useRouter();
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       const key = event.key.toLowerCase();
@@ -25,12 +23,12 @@ export default function Nav() {
           navigator.clipboard.writeText("ojas.singh@gmail.com");
           toast.success("Email Copied!");
           break;
-        case "b":
-          router.push("/blog")
-          break;
-        case "w":
-          router.push("/#work")
-          break;
+        // case "b":
+        //   router.push("/blog")
+        //   break;
+        // case "w":
+        //   router.push("/#work")
+        //   break;
       }
     };
 
@@ -60,18 +58,18 @@ export default function Nav() {
       newTab: false,
     },
 
-    {
-      href: "/#work",
-      label: "[W] work",
-      icon: ArrowDown,
-      placement: "right",
-    },
-    {
-      href: "/blog",
-      label: "[B] blog",
-      icon: ArrowUpRight,
-      placement: "right",
-    },
+    // {
+    //   href: "/#work",
+    //   label: "[W] work",
+    //   icon: ArrowDown,
+    //   placement: "right",
+    // },
+    // {
+    //   href: "/blog",
+    //   label: "[B] blog",
+    //   icon: ArrowUpRight,
+    //   placement: "right",
+    // },
   ];
 
   return (
