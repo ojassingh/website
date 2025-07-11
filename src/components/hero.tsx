@@ -7,7 +7,6 @@ import Nav from "./nav";
 import Link from "next/link";
 
 const Hero: FC = () => {
- 
 
   return (
     <>
@@ -16,7 +15,6 @@ const Hero: FC = () => {
         className="relative border-b-[1px] border-dashed border-neutral-600 grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
       >
         <Nav />
-
         <div className="row-start-5 z-20">
           <div className="z-20">
             <BlurFade inView delay={0.1}>
@@ -27,11 +25,9 @@ const Hero: FC = () => {
                 Building things for the web
               </h2>
             </BlurFade>
-            <BlurFade inView delay={0.3}>
               <h1 className="min-w-max tracking-tighter text-left text-7xl font-medium text-white sm:text-9xl">
                 ojas singh
               </h1>
-            </BlurFade>
           </div>
         </div>
 
