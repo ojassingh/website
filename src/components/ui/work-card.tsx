@@ -20,7 +20,7 @@ const WorkCard: FC<{
           height={1000}
           src={image}
           alt={title}
-          className="h-full w-full object-cover transition-all duration-300"
+          className="h-84 w-full object-cover transition-all duration-300"
         />
       </a>
       <div className="mt-4 flex items-center justify-between">
