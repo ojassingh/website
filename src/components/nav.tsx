@@ -27,6 +27,10 @@ export default function Nav() {
           break;
         case "b":
           router.push("/blog")
+          break;
+        case "w":
+          router.push("/#work")
+          break;
       }
     };
 
