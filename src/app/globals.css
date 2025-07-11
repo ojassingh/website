@@ -1,8 +1,6 @@
 @import 'tailwindcss';
-
 @plugin 'tailwindcss-animate';
-
-@custom-variant dark (&:is(.dark *));
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-background: oklch(var(--background));
