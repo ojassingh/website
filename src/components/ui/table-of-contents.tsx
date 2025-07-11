@@ -74,7 +74,7 @@ export function TableOfContents({ headings }: Props) {
                 <button
                   onClick={() => scrollTo(heading.id)}
                   className={`ml-3 tracking-tight py-1 hover:text-foreground transition-colors ${
-                    isActive ? "text-foreground font-semibold" : "text-muted-foreground"
+                    isActive ? "text-foreground font-medium" : "text-neutral-400"
                   }`}
                 >
                   {heading.text}
