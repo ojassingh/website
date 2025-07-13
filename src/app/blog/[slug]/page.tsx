@@ -61,7 +61,7 @@ export default async function Page(props: {
         <div className="py-14 grid place-content-center">
           <article className="">
             <div className="tracking-tighter">
-              <h1 className="text-center text-2xl font-medium">
+              <h1 className="text-center text-2xl tracking-tight text-pretty font-medium">
                 {frontmatter.title}
               </h1>
             </div>
