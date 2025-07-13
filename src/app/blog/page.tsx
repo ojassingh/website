@@ -59,9 +59,9 @@ export default async function Page() {
         <div className="mt-16">
           <h1 className="mb-4 text-3xl font-medium tracking-tighter">Blog</h1>
           <p className="text-lg tracking-tight text-neutral-400">
-            Trying to post more. Stay tuned weekly.
+            Trying to learn something new everyday. Will post about it once a week.
           </p>
-          <div className="grid gap-6 grid-cols-3 mt-16">
+          <div className="grid gap-6 grid-cols-2 mt-16">
             {posts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}

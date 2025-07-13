@@ -23,9 +23,9 @@ export default function BlogCard({ post }: BlogCardProps) {
           <Image
             src={post.thumbnail}
             alt={post.title}
-            width={160}
-            height={160}
-            className="h-60 w-full rounded-md object-cover"
+            width={400}
+            height={250}
+            className="h-80 w-full rounded-md object-cover"
           />
           <div>
           <h2 className="mt-4 px-4 text-xl text-pretty font-medium tracking-tight">
