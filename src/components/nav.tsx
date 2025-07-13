@@ -3,8 +3,11 @@ import Link from "next/link";
 import BlurFade from "./ui/blur-fade";
 import { useEffect } from "react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function Nav() {
+  const router = useRouter();
+  
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       const key = event.key.toLowerCase();
@@ -23,9 +26,9 @@ export default function Nav() {
           navigator.clipboard.writeText("ojas.singh@gmail.com");
           toast.success("Email Copied!");
           break;
-        // case "b":
-        //   router.push("/blog")
-        //   break;
+        case "b":
+          router.push("/blog")
+          break;
         // case "w":
         //   router.push("/#work")
         //   break;
@@ -64,12 +67,12 @@ export default function Nav() {
     //   icon: ArrowDown,
     //   placement: "right",
     // },
-    // {
-    //   href: "/blog",
-    //   label: "[B] blog",
-    //   icon: ArrowUpRight,
-    //   placement: "right",
-    // },
+    {
+      href: "/blog",
+      label: "[B] blog",
+      icon: ArrowUpRight,
+      placement: "right",
+    },
   ];
 
   return (
