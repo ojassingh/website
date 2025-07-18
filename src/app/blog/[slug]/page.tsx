@@ -48,7 +48,7 @@ export default async function Page(props: {
         <title className="">{frontmatter.title} | Ojas Singh</title>
         <meta name="description" content={frontmatter.description} />
       </Head>
-      <div className="mx-auto max-w-3xl p-6">
+      <div className="mx-auto text-white max-w-3xl p-6">
         <div className="flex items-center justify-between">
           <Link
             href="/"

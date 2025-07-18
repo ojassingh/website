@@ -48,7 +48,7 @@ export default async function Page(props: {
         <title className="">{frontmatter.title} | Ojas Singh</title>
         <meta name="description" content={frontmatter.description} />
       </Head>
-      <div className="mx-auto max-w-3xl p-6">
+      <div className="mx-auto text-white max-w-3xl p-6">
         <div className="flex items-center justify-between">
           <Link
             href="/"
@@ -69,7 +69,7 @@ export default async function Page(props: {
         <div className="py-14 grid place-content-center">
           <article className="">
             <div className="tracking-tighter">
-              <h1 className="text-center text-2xl font-medium">
+              <h1 className="text-center text-white text-2xl font-medium">
                 {frontmatter.title}
               </h1>
               <p className="mt-2 text-center text-lg text-neutral-400">
@@ -92,7 +92,7 @@ export default async function Page(props: {
               />
             </div>
           </article>
-          <div className="grid grid-cols-3 items-start gap-6 mt-14">
+          <div className="grid sm:grid-cols-3 items-start gap-6 mt-14">
             <div className="col-span-1 flex flex-col gap-2">
               <h4 className="text-lg font-medium">Stack</h4>
               <ul className="text-neutral-300 tracking-tighter">

@@ -12,7 +12,7 @@ const Hero: FC = () => {
     <>
       <section
         id="hero"
-        className="relative border-b-[1px] border-dashed border-neutral-600 grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
+        className="relative sm:border-b-[1px] border-dashed border-neutral-600 grid h-screen grid-cols-3 grid-rows-12 px-6 sm:px-10"
       >
         <Nav />
         <div className="row-start-4 sm:row-start-5 z-20">
