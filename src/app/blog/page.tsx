@@ -53,8 +53,8 @@ export default async function Page() {
         <title className="">Blog | Ojas Singh</title>
         <meta name="description" content="Blog posts by Ojas Singh" />
       </Head>
-    <main className="mx-auto min-h-screen max-w-7xl border-x-[1px] border-dashed border-neutral-700">
-      <div className="px-20">
+    <main className="mx-auto text-white min-h-screen sm:max-w-7xl border-x-[1px] border-dashed border-neutral-700">
+      <div className="px-8 sm:px-20">
         <Link
           href="/"
           className="flex items-center gap-2 pt-8 text-neutral-400 tracking-tight"
@@ -67,7 +67,7 @@ export default async function Page() {
           <p className="text-lg tracking-tight text-neutral-400">
             Trying to learn something new everyday. Will post about it once a week.
           </p>
-          <div className="grid gap-6 grid-cols-2 mt-16">
+          <div className="grid gap-6 sm:grid-cols-2 mt-16">
             {posts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}

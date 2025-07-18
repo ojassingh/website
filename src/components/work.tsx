@@ -32,7 +32,7 @@ const works: work[] = [
 
 const Work: FC = () => {
   return (
-    <section id="work" className="px-10 py-20 border-b-[1px] border-dashed border-neutral-600">
+    <section id="work" className="px-7 sm:px-10 py-6 sm:py-20 border-b-[1px] border-dashed border-neutral-600">
       <div className="flex justify-between">
         <h1 className="text-xl font-medium tracking-tight">Work</h1>
         <Link
@@ -63,7 +63,7 @@ const Work: FC = () => {
         </Link>
         , where we&apos;re creating cool math videos.
       </p>
-      <div className="mt-10 grid grid-cols-2 gap-10">
+      <div className="mt-10 sm:mt-1 grid-cols-1 grid sm:grid-cols-2 gap-10">
         {works.map(({ title, description, image, date, link }, index) => {
           return (
             <BlurFade inView delay={0.1 + index * 0.1} key={index}>
