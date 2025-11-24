@@ -1,6 +1,5 @@
 import Hero from "@/components/hero";
 import Work from "@/components/work";
-import { FooterGradient } from "@/components/ui/footer-gradient";
 
 export default function Home() {
   return (
@@ -8,7 +7,6 @@ export default function Home() {
       <div className="">
       <Hero />
       <Work />
-      <FooterGradient />
       </div>
     </main>
   );
