@@ -5,6 +5,7 @@ import BlurFade from "./ui/blur-fade";
 import { Plus, Sparkles } from "lucide-react";
 import Nav from "./nav";
 import Link from "next/link";
+import { AsciiScene } from "./ascii-scene";
 
 const Hero: FC = () => {
 
@@ -52,14 +53,9 @@ const Hero: FC = () => {
         <div className="absolute bottom-0 z-20 h-60 w-full bg-linear-to-b from-transparent to-black"></div>
       </section>
       
-      <video
-        src="/gradient.mp4"
-        loop
-        autoPlay
-        muted
-        playsInline
-        className="absolute inset-0 mx-auto h-screen w-full object-cover opacity-30 sm:max-w-7xl"
-      ></video>
+      <div className="absolute inset-0 mx-auto h-screen w-full sm:max-w-7xl pointer-events-none">
+        <AsciiScene />
+      </div>
     </>
   );
 };
