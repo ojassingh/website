@@ -1,5 +1,6 @@
 import { ArrowUpRight, Copy } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function Nav() {
   const links = [
@@ -16,6 +17,10 @@ export default function Nav() {
     {
       label: "email",
       icon: Copy,
+      onClick: () => {
+        navigator.clipboard.writeText("ojas.singh02@gmail.com");
+        toast("Email copied!")
+      },
     },
     {
       href: "https://x.com/ojassinghh",
@@ -43,7 +48,7 @@ export default function Nav() {
               <link.icon className="mr-1 text-neutral-400 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </Link>
           ) : (
-            <div className="group flex items-center">
+            <div onClick={link.onClick} className="group flex items-center cursor-pointer">
               <p className="text-neutral-400 flex items-center gap-2"> {link.label}</p>
               <link.icon className="mr-1 text-neutral-400 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </div>
