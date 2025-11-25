@@ -1,8 +1,6 @@
 import React from "react";
 import { FC } from "react";
 import WorkCard from "./ui/work-card";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import BlurFade from "./ui/blur-fade";
 
 type work = {
