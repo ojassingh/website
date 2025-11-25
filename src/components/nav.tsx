@@ -1,99 +1,56 @@
 import { ArrowUpRight, Copy } from "lucide-react";
 import Link from "next/link";
-import BlurFade from "./ui/blur-fade";
-import { useEffect } from "react";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
 
 export default function Nav() {
-  const router = useRouter();
-  
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      const key = event.key.toLowerCase();
-
-      switch (key) {
-        case "l":
-          window.open("https://www.linkedin.com/in/ojas-singh/", "_blank");
-          break;
-        case "g":
-          window.open("https://github.com/ojassingh", "_blank");
-          break;
-        case "x":
-          window.open("https://x.com/ojassinghh", "_blank");
-          break;
-        case "e":
-          navigator.clipboard.writeText("ojas.singh@gmail.com");
-          toast.success("Email Copied!");
-          break;
-        case "b":
-          router.push("/blog")
-          break;
-        // case "w":
-        //   router.push("/#work")
-        //   break;
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-    return () => window.removeEventListener("keydown", handleKeyPress);
-  }, []);
-  
   const links = [
     {
-      shortcut: "L",
       href: "https://www.linkedin.com/in/ojas-singh/",
       label: "linkedin",
       icon: ArrowUpRight,
     },
     {
-      shortcut: "G",
       href: "https://github.com/ojassingh",
       label: "github",
       icon: ArrowUpRight,
     },
     {
-      shortcut: "E",
       label: "email",
       icon: Copy,
     },
     {
-      shortcut: "X",
       href: "https://x.com/ojassinghh",
       label: "X",
       icon: ArrowUpRight,
       newTab: false,
     },
-    {
-      shortcut: "B",
-      href: "/blog",
-      label: "blog",
-      icon: ArrowUpRight,
-      placement: "right",
-    },
   ];
 
   return (
-    <div className="row-start-1 sm:row-start-3 z-20 gap-8 flex place-content-between pt-10 sm:col-span-6 sm:col-start-1 sm:place-content-start sm:gap-1 sm:pt-0">
+    <div className="z-20 flex place-content-between pt-10">
+      <div>
+        <p className="text-xl font-medium">Ojas Singh</p>
+      </div>
+      <div className="flex items-center gap-2">
       {links.map((link, index) => (
-        <BlurFade key={index} delay={0.4 + index * 0.05}>
+        <div key={index}>
           {link.href ? (
             <Link
-              target={link.newTab ? "_blank" : "_self"}
+              target="_blank"
               href={link.href}
               className="group flex max-w-max items-center"
             >
-              <p className="text-white flex items-center gap-2"><span className="sm:block hidden">{link.shortcut}</span> {link.label}</p>
-              <link.icon className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+              <p className="text-neutral-400 flex items-center gap-2">{link.label}</p>
+              <link.icon className="mr-1 text-neutral-400 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </Link>
           ) : (
             <div className="group flex items-center">
-              <p className="text-white">{link.label}</p>
-              <link.icon className="mr-1 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+              <p className="text-neutral-400 flex items-center gap-2"> {link.label}</p>
+              <link.icon className="mr-1 text-neutral-400 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </div>
           )}
-        </BlurFade>
+        </div>
       ))}
+      </div>
     </div>
   );
 }

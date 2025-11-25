@@ -15,7 +15,7 @@ const WorkCard: FC<{
     <div className={cn("flex flex-col", ` ${className}`)}>
       <Link
         href={link}
-        className="group relative flex h-full w-full items-center justify-center overflow-hidden rounded-sm bg-gray-100 object-cover shadow-lg ring-1 ring-white/5 transition-all duration-300"
+        className="group relative flex h-full w-full items-center justify-center overflow-hidden rounded-sm object-cover shadow-lg transition-all duration-300"
       >
         <Image
           width={1000}
@@ -27,9 +27,9 @@ const WorkCard: FC<{
       </Link>
       <div className="mt-4 flex items-center justify-between">
         <p className="text-base text-white">{title}</p>
-        <span className="rounded-md px-1 text-sm text-gray-500">{date}</span>
+        <span className="rounded-md px-1 text-sm text-neutral-400">{date}</span>
       </div>
-      <p className="text-gray-500">{description}</p>
+      <p className="text-neutral-400">{description}</p>
     </div>
   );
 };

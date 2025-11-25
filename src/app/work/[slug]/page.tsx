@@ -68,7 +68,7 @@ export default async function Page(props: {
         </div>
         <div className="py-14 grid place-content-center">
           <article className="">
-            <div className="tracking-tighter">
+            <div className="tracking-tight">
               <h1 className="text-center text-white text-2xl font-medium">
                 {frontmatter.title}
               </h1>
@@ -95,7 +95,7 @@ export default async function Page(props: {
           <div className="grid sm:grid-cols-3 items-start gap-6 mt-14">
             <div className="col-span-1 flex flex-col gap-2">
               <h4 className="text-lg font-medium">Stack</h4>
-              <ul className="text-neutral-300 tracking-tighter">
+              <ul className="text-neutral-300 tracking-tight">
               {frontmatter.stack.map((stack: string, index: number) => (
                 <li key={index}>{stack}</li>
               ))}
@@ -103,7 +103,7 @@ export default async function Page(props: {
             </div>
             <div className="col-span-2">
               <p className="text-lg font-medium">TLDR</p>
-            <p className="text-neutral-300 tracking-tighter whitespace-pre-line">{frontmatter.tldr}</p>
+            <p className="text-neutral-300 tracking-tight whitespace-pre-line">{frontmatter.tldr}</p>
             </div>
           </div>
           <div className="mt-14">
