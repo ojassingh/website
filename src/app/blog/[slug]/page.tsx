@@ -77,7 +77,7 @@ export default async function Page(props: {
           </article>
           <div className="mt-14">
             <h4 className="text-xl font-medium">TLDR</h4>
-            <p className="text-neutral-300 mt-2 tracking-tighter whitespace-pre-line">{frontmatter.tldr}</p>
+            <p className="text-muted-foreground mt-2 tracking-tighter whitespace-pre-line">{frontmatter.tldr}</p>
           </div>
           <div className="mt-14">
             <Post />
