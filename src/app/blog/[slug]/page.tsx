@@ -46,11 +46,11 @@ export default async function Page(props: {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-neutral-400 tracking-tight"
+            className="flex items-center gap-2 text-muted-foreground tracking-tight"
           >
             <ArrowLeft className="size-4" /> Back
           </Link>
-          <p className="text-neutral-400">{frontmatter.date}</p>
+          <p className="text-muted-foreground">{frontmatter.date}</p>
         </div>
         <div className="py-14 grid place-content-center">
           <article className="">

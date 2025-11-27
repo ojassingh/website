@@ -46,7 +46,7 @@ export default async function Page(props: {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-neutral-400"
+            className="flex items-center gap-2 text-muted-foreground"
           >
             <ArrowLeft className="size-4" /> Back
           </Link>
@@ -54,7 +54,7 @@ export default async function Page(props: {
             <Link
               href={frontmatter.website}
               target="_blank"
-              className="flex items-center gap-2 text-neutral-400"
+              className="flex items-center gap-2 text-muted-foreground"
             >
               Website <ArrowUpRight className="size-4" />
             </Link>
@@ -66,7 +66,7 @@ export default async function Page(props: {
               <h1 className="text-center text-white text-2xl font-medium">
                 {frontmatter.title}
               </h1>
-              <p className="mt-2 text-center text-lg text-neutral-400">
+              <p className="mt-2 text-center text-lg text-muted-foreground">
                 {frontmatter.type}, {frontmatter.date}
               </p>
             </div>

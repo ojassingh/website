@@ -55,7 +55,7 @@ export function TableOfContents({ headings }: Props) {
 
   return (
     <div className="hidden xl:block fixed right-4 top-20 w-64 prose dark:prose-invert">
-      <div className="bg-background rounded-lg">
+      <div className="rounded-lg">
         <h4 className="font-medium tracking-tight text-sm mb-3 flex items-center gap-2">
           <AlignLeft className="size-4" /> On this page
         </h4>
@@ -74,7 +74,7 @@ export function TableOfContents({ headings }: Props) {
                 <button
                   onClick={() => scrollTo(heading.id)}
                   className={`ml-3 tracking-tight py-1 hover:text-foreground transition-colors ${
-                    isActive ? "text-foreground font-medium" : "text-neutral-400"
+                    isActive ? "text-foreground font-medium" : "text-muted-foreground"
                   }`}
                 >
                   {heading.text}

@@ -44,13 +44,13 @@ export default function Nav() {
               href={link.href}
               className="group flex max-w-max items-center"
             >
-              <p className="text-neutral-400 flex items-center gap-2">{link.label}</p>
-              <link.icon className="mr-1 text-neutral-400 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+              <p className="text-muted-foreground flex items-center gap-2">{link.label}</p>
+              <link.icon className="mr-1 text-muted-foreground hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </Link>
           ) : (
             <div onClick={link.onClick} className="group flex items-center cursor-pointer">
-              <p className="text-neutral-400 flex items-center gap-2"> {link.label}</p>
-              <link.icon className="mr-1 text-neutral-400 hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+              <p className="text-muted-foreground flex items-center gap-2"> {link.label}</p>
+              <link.icon className="mr-1 text-muted-foreground hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
             </div>
           )}
         </div>

@@ -57,14 +57,14 @@ export default async function Page() {
       <div className="px-8 sm:px-20">
         <Link
           href="/"
-          className="flex items-center gap-2 pt-8 text-neutral-400 tracking-tight"
+          className="flex items-center gap-2 pt-8 text-muted-foreground tracking-tight"
         >
           <ArrowLeft className="h-4 w-4" />
           Back
         </Link>
         <div className="mt-16">
           <h1 className="mb-4 text-3xl font-medium tracking-tighter">Blog</h1>
-          <p className="text-lg tracking-tight text-neutral-400">
+          <p className="text-lg tracking-tight text-muted-foreground">
             Trying to learn something new everyday. Will post about it once a week.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 mt-16">
@@ -76,7 +76,7 @@ export default async function Page() {
 
         {posts.length === 0 && (
           <div className="py-16 text-center">
-            <p className="text-lg text-neutral-400">No blog posts found.</p>
+            <p className="text-lg text-muted-foreground">No blog posts found.</p>
           </div>
         )}
       </div>

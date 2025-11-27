@@ -31,7 +31,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           <h2 className="mt-4 px-4 text-xl text-pretty font-medium tracking-tight">
             {post.title}
           </h2>
-          <div className="flex mt-2 px-4 items-center justify-between text-sm text-neutral-400">
+          <div className="flex mt-2 px-4 items-center justify-between text-sm text-muted-foreground">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",

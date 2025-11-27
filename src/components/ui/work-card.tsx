@@ -27,9 +27,9 @@ const WorkCard: FC<{
       </Link>
       <div className="mt-4 flex items-center justify-between">
         <p className="text-base text-white">{title}</p>
-        <span className="rounded-md px-1 text-sm text-neutral-400">{date}</span>
+        <span className="rounded-md px-1 text-sm text-muted-foreground">{date}</span>
       </div>
-      <p className="text-neutral-400">{description}</p>
+      <p className="text-muted-foreground">{description}</p>
     </div>
   );
 };

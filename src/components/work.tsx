@@ -39,10 +39,10 @@ const Work: FC = () => {
       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
       <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
       </span>
-        <p className="text-neutral-400">Software Engineer @ Finni Health (YC W23)</p>
+        <p className="text-muted-foreground">Software Engineer @ Finni Health (YC W23)</p>
       </div>
       <div className="">
-        <p className="text-neutral-400">Previously I was doing contract work for Deskhead, Cove, and Flow Robotics</p>
+        <p className="text-muted-foreground">Previously I was doing contract work for Deskhead, Cove, and Flow Robotics</p>
       </div>
       <div className="mt-10 grid-cols-1 grid sm:grid-cols-2 gap-10">
         {works.map(({ title, description, image, date, link }, index) => {
