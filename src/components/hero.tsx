@@ -12,7 +12,7 @@ const Hero: FC = () => {
         className="sm:px-10 px-7"
       >
         <Nav />
-        <p className="text-neutral-400 mt-10">
+        <p className="text-muted-foreground mt-10">
           I&apos;m a software engineer based in Toronto. 
           Studied physics and statistics at UofT. 
           <br/>

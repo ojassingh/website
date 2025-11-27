@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Head from "next/head";
 import { TableOfContents } from "@/components/ui/table-of-contents";
 import { extractHeadings } from "@/lib/headings";
 import Link from "next/link";
@@ -26,7 +25,7 @@ export async function generateMetadata(props: {
   const { data: frontmatter } = matter(fileContent);
 
   return {
-    title: frontmatter.title || "Untitled",
+    title: `${frontmatter.title || "Untitled"} | Ojas Singh`,
     description: frontmatter.description || "Ojas Singh",
   };
 }
@@ -43,12 +42,7 @@ export default async function Page(props: {
   const { default: Post } = await import(`@/work/${params.slug}.mdx`);
 
   return (
-    <>
-      <Head>
-        <title className="">{frontmatter.title} | Ojas Singh</title>
-        <meta name="description" content={frontmatter.description} />
-      </Head>
-      <div className="mx-auto text-white max-w-3xl p-6">
+    <div className="mx-auto text-white max-w-3xl p-6">
         <div className="flex items-center justify-between">
           <Link
             href="/"
@@ -111,8 +105,7 @@ export default async function Page(props: {
           </div>
         </div>
         <TableOfContents headings={headings} />
-      </div>
-    </>
+    </div>
   );
 }
 

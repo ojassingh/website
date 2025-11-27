@@ -5,7 +5,7 @@ import path from "path";
 import matter from "gray-matter";
 import { ArrowLeft } from "lucide-react";
 import BlogCard from "./blog-card";
-import Head from "next/head";
+import type { Metadata } from "next";
 
 interface BlogPost {
   slug: string;
@@ -44,15 +44,15 @@ async function getBlogPosts(): Promise<BlogPost[]> {
   );
 }
 
+export const metadata: Metadata = {
+  title: "Blog | Ojas Singh",
+  description: "Blog posts by Ojas Singh",
+};
+
 export default async function Page() {
   const posts = await getBlogPosts();
 
   return (
-    <>
-    <Head>
-        <title className="">Blog | Ojas Singh</title>
-        <meta name="description" content="Blog posts by Ojas Singh" />
-      </Head>
     <main className="mx-auto text-white min-h-screen sm:max-w-7xl border-x-[1px] border-dashed border-neutral-700">
       <div className="px-8 sm:px-20">
         <Link
@@ -80,6 +80,6 @@ export default async function Page() {
           </div>
         )}
       </div>
-    </main></>
+    </main>
   );
 }
