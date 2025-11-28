@@ -2,6 +2,7 @@ import React from "react";
 import { FC } from "react";
 import WorkCard from "./ui/work-card";
 import BlurFade from "./ui/blur-fade";
+import Link from "next/link";
 
 type work = {
   title: string;
@@ -33,6 +34,9 @@ const Work: FC = () => {
     <section id="work" className="px-7 sm:px-10 py-6 sm:py-10">
       <div className="flex justify-between">
         <h1 className="text-lg font-medium tracking-tight">Work</h1>
+        <Link className="underline text-muted-foreground" target="_blank" href={"https://drive.google.com/file/d/1GlmBlC-k5E97bl54c0OACVr6iuMmppKM/view?usp=sharing"}>
+          Resume
+        </Link>
       </div>
       <div className="flex mt-2 items-center gap-2">
       <span className="relative flex size-2">
