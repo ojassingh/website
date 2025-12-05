@@ -1,7 +1,5 @@
-import React from "react";
 import { FC } from "react";
 import WorkCard from "./ui/work-card";
-import BlurFade from "./ui/blur-fade";
 import Link from "next/link";
 
 type work = {
@@ -51,7 +49,6 @@ const Work: FC = () => {
       <div className="mt-10 grid-cols-1 grid sm:grid-cols-2 gap-10">
         {works.map(({ title, description, image, date, link }, index) => {
           return (
-            <BlurFade inView delay={0.1 + index * 0.1} key={index}>
               <WorkCard
               link={link}
               title={title}
@@ -60,7 +57,6 @@ const Work: FC = () => {
               date={date}
               key={index}
             />
-            </BlurFade>
           );
         })}
       </div>
