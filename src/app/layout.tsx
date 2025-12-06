@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist} from "next/font/google";
-import { Toaster } from "@/components/ui/sonner";
+import { Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 const geist = Geist({
@@ -26,8 +26,8 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
           disableTransitionOnChange
+          enableSystem
         >
           {children}
           <Toaster />

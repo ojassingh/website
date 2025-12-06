@@ -1,8 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface BlogPost {
+type BlogPost = {
   slug: string;
   title: string;
   date: string;
@@ -10,28 +9,28 @@ interface BlogPost {
   role: string;
   headshot: string;
   thumbnail: string;
-}
+};
 
-interface BlogCardProps {
+type BlogCardProps = {
   post: BlogPost;
-}
+};
 
 export default function BlogCard({ post }: BlogCardProps) {
   return (
-    <Link href={`/blog/${post.slug}`} className="">
-        <div className="">
-          <Image
-            src={post.thumbnail}
-            alt={post.title}
-            width={400}
-            height={250}
-            className="h-80 w-full rounded-md object-cover"
-          />
-          <div>
-          <h2 className="mt-4 px-4 text-xl text-pretty font-medium tracking-tight">
+    <Link className="" href={`/blog/${post.slug}`}>
+      <div className="">
+        <Image
+          alt={post.title}
+          className="h-80 w-full rounded-md object-cover"
+          height={250}
+          src={post.thumbnail}
+          width={400}
+        />
+        <div>
+          <h2 className="mt-4 text-pretty px-4 font-medium text-xl tracking-tight">
             {post.title}
           </h2>
-          <div className="flex mt-2 px-4 items-center justify-between text-sm text-muted-foreground">
+          <div className="mt-2 flex items-center justify-between px-4 text-muted-foreground text-sm">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
@@ -40,8 +39,8 @@ export default function BlogCard({ post }: BlogCardProps) {
               })}
             </time>
           </div>
-          </div>
         </div>
+      </div>
     </Link>
   );
 }

@@ -19,7 +19,7 @@ export default function Nav() {
       icon: Copy,
       onClick: () => {
         navigator.clipboard.writeText("ojas.singh02@gmail.com");
-        toast("Email copied!")
+        toast("Email copied!");
       },
     },
     {
@@ -33,28 +33,43 @@ export default function Nav() {
   return (
     <div className="z-20 flex place-content-between pt-10">
       <div>
-        <p className="text-xl font-medium">Ojas Singh</p>
+        <p className="font-medium text-xl">Ojas Singh</p>
       </div>
       <div className="flex items-center gap-2">
-      {links.map((link, index) => (
-        <div key={index}>
-          {link.href ? (
-            <Link
-              target="_blank"
-              href={link.href}
-              className="group flex max-w-max items-center"
-            >
-              <p className="text-muted-foreground flex items-center gap-2">{link.label}</p>
-              <link.icon className="mr-1 text-muted-foreground hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
-            </Link>
-          ) : (
-            <div onClick={link.onClick} className="group flex items-center cursor-pointer">
-              <p className="text-muted-foreground flex items-center gap-2"> {link.label}</p>
-              <link.icon className="mr-1 text-muted-foreground hidden h-4 w-4 rotate-45 opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
-            </div>
-          )}
-        </div>
-      ))}
+        {links.map((link, index) => (
+          <div key={index.toString()}>
+            {link.href ? (
+              <Link
+                className="group flex max-w-max items-center"
+                href={link.href}
+                target="_blank"
+              >
+                <p className="flex items-center gap-2 text-muted-foreground">
+                  {link.label}
+                </p>
+                <link.icon className="mr-1 hidden h-4 w-4 rotate-45 text-muted-foreground opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+              </Link>
+            ) : (
+              <button
+                className="group flex cursor-pointer items-center"
+                onClick={link.onClick}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    link.onClick?.();
+                  }
+                }}
+                tabIndex={0}
+                type="button"
+              >
+                <p className="flex items-center gap-2 text-muted-foreground">
+                  {" "}
+                  {link.label}
+                </p>
+                <link.icon className="mr-1 hidden h-4 w-4 rotate-45 text-muted-foreground opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+              </button>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

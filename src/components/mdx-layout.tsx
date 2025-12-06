@@ -1,8 +1,7 @@
-
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
-    return (
-      <div className="prose dark:prose-invert prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-headings:font-normal prose-headings:tracking-tighter tracking-tighter max-w-3xl mx-auto px-0">
-        {children}
-      </div>
-    )
-  }
+  return (
+    <div className="prose dark:prose-invert mx-auto max-w-3xl px-0 prose-headings:font-normal prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-headings:tracking-tighter tracking-tighter">
+      {children}
+    </div>
+  );
+}
