@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import Script from "next/script";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -22,6 +23,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          data-website-id="a376b7a7-49ff-43cf-acbf-bd7966ea9b9b"
+          defer
+          src="https://trysignal.vercel.app/track.js"
+        />
+      </head>
       <body className={`${geist.className} antialiased`}>
         <ThemeProvider
           attribute="class"
