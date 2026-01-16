@@ -30,7 +30,7 @@ export default function RootLayout({
           src="https://trysignal.vercel.app/track.js"
         />
       </head>
-      <body className={`${geist.className} antialiased`}>
+      <body className={`${geist.className} bg-stone-950 antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

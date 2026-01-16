@@ -1,8 +1,12 @@
-import { ArrowUpRight, Copy } from "lucide-react";
+"use client";
+
+import { ArrowUpRight, Check, Copy } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
-import { toast } from "sonner";
+import { useState } from "react";
 
 export default function Nav() {
+  const [isCopied, setIsCopied] = useState(false);
   const links = [
     {
       href: "https://www.linkedin.com/in/ojas-singh/",
@@ -15,18 +19,19 @@ export default function Nav() {
       icon: ArrowUpRight,
     },
     {
+      href: "https://x.com/ojassinghh",
+      label: "x",
+      icon: ArrowUpRight,
+      newTab: false,
+    },
+    {
       label: "email",
       icon: Copy,
       onClick: () => {
         navigator.clipboard.writeText("ojas.singh02@gmail.com");
-        toast("Email copied!");
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 2000);
       },
-    },
-    {
-      href: "https://x.com/ojassinghh",
-      label: "X",
-      icon: ArrowUpRight,
-      newTab: false,
     },
   ];
 
@@ -65,7 +70,31 @@ export default function Nav() {
                   {" "}
                   {link.label}
                 </p>
-                <link.icon className="mr-1 hidden h-4 w-4 rotate-45 text-muted-foreground opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100 sm:block" />
+                <div className="mr-1 hidden h-4 w-4 sm:block">
+                  <AnimatePresence mode="wait">
+                    {isCopied ? (
+                      <motion.div
+                        animate={{ opacity: 1, filter: "blur(0px)" }}
+                        exit={{ opacity: 0, filter: "blur(4px)" }}
+                        initial={{ opacity: 0, filter: "blur(4px)" }}
+                        key="check"
+                        transition={{ duration: 0.15, ease: "easeOut" }}
+                      >
+                        <Check className="ml-1 h-4 w-4 text-muted-foreground" />
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        animate={{ opacity: 1, filter: "blur(0px)" }}
+                        exit={{ opacity: 0, filter: "blur(4px)" }}
+                        initial={{ opacity: 0, filter: "blur(4px)" }}
+                        key="copy"
+                        transition={{ duration: 0.15, ease: "easeOut" }}
+                      >
+                        <link.icon className="h-4 w-4 rotate-45 text-muted-foreground opacity-0 duration-300 group-hover:ml-1 group-hover:rotate-0 group-hover:opacity-100" />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </button>
             )}
           </div>
